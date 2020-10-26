@@ -1,15 +1,16 @@
 
 import './App.css';
 import { BrowserRouter, Switch, Route } from "react-router-dom";
-import PostList from "./components/postList";
+import Home from "./components/Home";
+import PostPage from "./components/PostPage";
 
 function App() {
   return (
     <div className="App">
       <BrowserRouter>
         <Switch>
-          <Route exact path="/posts" component={PostList} />
-
+          <Route path="/post/:id" component={PostPage} />
+          <Route exact path="/home" component={Home} />
         </Switch>
       </BrowserRouter>
 

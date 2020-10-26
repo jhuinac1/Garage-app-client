@@ -1,11 +1,21 @@
 .App {
-  text-align: center;
+  /* text-align: center; */
+  min-height: 100vh;
+  background-color: rgb(202, 211, 120);
 }
 
 .App-logo {
   height: 40vmin;
   pointer-events: none;
 }
+.individual-post{
+  cursor: pointer;
+  /* background-color: gray; */
+}
+.individual-post a{
+  color: #282c34;
+}
+
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {

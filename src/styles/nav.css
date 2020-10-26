@@ -1,0 +1,16 @@
+
+nav{
+    background-color: rgb(37, 28, 26);
+    color: white;
+    min-height: 60px;
+}
+nav a{
+    text-decoration: none;
+    color: white;
+    margin-left: 20px;
+}
+li{
+    list-style: none;
+}
+
+
