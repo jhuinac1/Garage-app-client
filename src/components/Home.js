@@ -18,8 +18,94 @@ class PostList extends React.Component {
         this.setZipcode = this.setZipcode.bind(this)
     }
     componentDidMount() {
-        this.getAllPosts();
-        // try {
+        // this.getAllPosts();
+
+        // this.getLocation(94901);
+    }
+    setZipcode(event) {
+        try {
+            // console.log(event.target.id);
+            this.setState({
+                [event.target.id]: event.target.value
+            })
+        } catch (error) {
+            console.log(error);
+        }
+    }
+    getLocation(event) {
+        event.preventDefault();
+        event.target.reset();
+
+        if (this.state.zipcode.length === 5) {
+            const API_KEY = process.env.REACT_APP_GOOGLE_MAPS_API_KEY;
+            axios.get(`https://maps.googleapis.com/maps/api/geocode/json?address=${this.state.zipcode}&region=US&key=${API_KEY}`).then(
+                (response) => {
+                    console.log(response.data.results[0])
+                    const cityInfo = response.data.results[0];
+                    const nCity = cityInfo.address_components[1].long_name;
+                    this.getAllPosts(nCity);
+                    this.setState({
+                        city: nCity,
+                        formatted_address: cityInfo.formatted_address,
+                    })
+                }
+            ).catch((error) => {
+                console.log(error);
+            }
+            )
+        } else {
+            alert("Enter 5 digits for zipcode");
+        }
+    }
+    getAllPosts(cityName) {
+        axios.get("http://localhost:3001/posts/byName/" + cityName).then((response) => {
+            this.setState({
+                posts: response.data,
+            })
+        }
+        )
+    }
+
+    render() {
+        return (<>
+            <div>
+                <form onSubmit={this.getLocation}>
+                    <label htmlFor="zipcode">Enter Zipcode: </label>
+                    <input type="number" onChange={this.setZipcode} name="zipcode" id="zipcode" />
+                    <input type="submit" value="Submit" />
+                </form>
+            </div>
+            <div>
+                {(this.state.city === "") ? <p></p> :
+                    <h1>{this.state.formatted_address}
+                        <h2>{this.state.city}</h2>
+                    </h1>}
+            </div>
+            <ul>
+                {this.state.posts.map((post) => {
+                    return <Post
+                        key={post._id}
+                        ids={post._id}
+                        title={post.title}
+                        description={post.description}
+                        images={post.pictures}
+                    />
+                }
+                )}
+            </ul>
+
+        </>
+        )
+    }
+};
+
+export default PostList;
+
+
+
+
+//CODE FROM KENG TO FIX HIS AXIOS CALL TO GET A TOKEN
+  // try {
         //     axios.post(
         //         'https://test.api.amadeus.com/v1/security/oauth2/token',
         //         {
@@ -48,85 +134,3 @@ class PostList extends React.Component {
         // } catch (error) {
         //     console.log(error);
         // }
-        // this.getLocation(94901);
-    }
-    setZipcode(event) {
-        try {
-            // console.log(event.target.id);
-            this.setState({
-                [event.target.id]: event.target.value
-            })
-        } catch (error) {
-            console.log(error);
-        }
-    }
-    getLocation(event) {
-        event.preventDefault();
-        event.target.reset();
-
-        if (this.state.zipcode.length === 5) {
-            const API_KEY = process.env.REACT_APP_GOOGLE_MAPS_API_KEY;
-            axios.get(`https://maps.googleapis.com/maps/api/geocode/json?address=${this.state.zipcode}&region=US&key=${API_KEY}`).then(
-                (response) => {
-                    console.log(response.data.results[0])
-                    const cityInfo = response.data.results[0];
-                    this.setState({
-                        city: cityInfo.address_components[1].long_name,
-                        formatted_address: cityInfo.formatted_address,
-                    })
-                }
-            ).catch((error) => {
-                console.log(error);
-            }
-            )
-        } else {
-            alert("Enter 5 digits for zipcode");
-        }
-    }
-    getAllPosts() {
-        axios.get("http://localhost:3001/posts").then((response) => {
-            this.setState({
-                posts: response.data,
-            })
-        }
-        )
-    }
-
-    renderPosts() {
-        return (
-            <ul>
-                {this.state.posts.map((post) => {
-                    return <Post
-                        key={post._id}
-                        ids={post._id}
-                        title={post.title}
-                        description={post.description}
-                        images={post.pictures}
-                    />
-                }
-                )}
-            </ul>)
-    }
-
-    render() {
-        return (<>
-            < NavBar />
-            <div>
-                <form onSubmit={this.getLocation}>
-                    <label htmlFor="zipcode">Enter Zipcode: </label>
-                    <input type="number" onChange={this.setZipcode} name="zipcode" id="zipcode" />
-                    <input type="submit" value="Submit" />
-                </form>
-            </div>
-            <div>
-                {(this.state.city === "") ? <p></p> :
-                    <h1>{this.state.formatted_address}</h1>}
-            </div>
-            {this.renderPosts()}
-
-        </>
-        )
-    }
-};
-
-export default PostList;

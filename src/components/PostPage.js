@@ -9,7 +9,7 @@ const PostPage = (props) => {
     const [post, setPost] = useState({});
 
     useEffect(() => {
-        setPost(props.match.params.id);
+        // setPost(props.match.params.id);
         let postId = props.match.params.id;
         axios.get("http://localhost:3001/posts/" + postId).then(
             (response) => {
@@ -21,7 +21,6 @@ const PostPage = (props) => {
     )
 
     return (<div className="post-page">
-        <Nav />
         <h1>Page Test</h1>
         {(post.pictures === undefined) ?
             <p>No Image</p> :
