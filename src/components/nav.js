@@ -1,9 +1,7 @@
 import React from "react";
 import "../styles/nav.css";
-
+import AuthButtons from "./auth/AuthButtons";
 class NavBar extends React.Component {
-
-
 
     render() {
 
@@ -11,8 +9,7 @@ class NavBar extends React.Component {
             <nav className="grid-x align-middle grid-padding-x align-justify ">
                 <a href="/home" className="cell small-1">HOME</a>
                 <div className="small-4">
-                    <button >Log In</button>
-                    <button>Sign Up</button>
+                    <AuthButtons />
                 </div>
             </nav>
         )
