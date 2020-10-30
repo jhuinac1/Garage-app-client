@@ -14,16 +14,19 @@ ul{
   list-style: none;
 }
 
+
 button, input[type="submit"]{
   border: none;
-  background: rgb(93, 140, 151);
+  background-color: rgb(20, 85, 116);
   color: unset;
   cursor: pointer;
   outline: none;
   padding: 12px;
   margin:5px;
 }
-
+input{
+  outline: none;
+}
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',

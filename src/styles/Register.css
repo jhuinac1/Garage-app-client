@@ -1,0 +1,84 @@
+.register-page{
+    position: relative;
+    /* background-color: rgb(223, 223, 223); */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding:25px 0;
+    color: rgb(32, 49, 65);
+}
+
+.register-page form{
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(238, 238, 238);
+    padding: 80px 10px;
+    margin: 50px 0;
+    width: 320px;
+}
+
+.register-page h1{
+    transform: skew(-7deg);
+    font-size: 3em;
+}
+
+.register-input{
+    width: 90%;
+    margin: 7px auto 15px auto;
+    padding: 5px 12px;
+    border-radius: 2px;
+    border: 1px solid rgba(133, 133, 133, 0.397);
+    transform: skew(-5deg);
+}
+
+.register-label{
+    margin-left:15px;
+    transform: skew(-5deg);
+}
+
+.register-page form input[type="submit"]{
+    color: white;
+    width: 90%;
+    transform: skew(-5deg);
+    margin: 0 auto;
+    transition: .3s ease-in-out;
+}
+.register-page form input[type="submit"]:hover{
+    background-color: rgb(74, 157, 172);
+}
+
+
+.register-page form p{
+    margin: 20px 0 0 12px;
+    color: rgba(78, 78, 78, 0.705);
+    transform: skew(-10deg);
+    transition: .2s ease-in-out;
+}
+.register-page form p:hover{
+    color: rgb(41, 88, 107);
+}
+
+.error-messages{
+    position: absolute;
+    top: 150px;
+    color: white;
+    background-color: rgb(216, 36, 36);
+    font-size: .7em;
+    font-weight: 700;
+    padding: 5px 10px;
+    border-radius: 15px;
+    max-width: 220px;
+}
+.error-messages button{
+    border-radius: 50%;
+    background: none;
+    padding: 0;
+    font-size: 1.2em;
+    margin: 0;
+    margin-right: 15px;
+}
+
+.error-messages span{
+    word-wrap: break-word;
+}
+

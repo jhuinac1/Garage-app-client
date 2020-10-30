@@ -2,6 +2,7 @@ import React, { useState, useContext } from 'react';
 import { Link } from "react-router-dom";
 import UserContext from '../../context/userContext';
 import axios from "axios";
+import Login from "../auth/Login";
 
 export default function Dashboard() {
     const { userData } = useContext(UserContext);
@@ -25,7 +26,7 @@ export default function Dashboard() {
     return (
         <div className="Dashboard-page">
             {
-                (!userData.user) ? <Link to="/log-in">Log In</Link> :
+                (!userData.user) ? <Login /> :
                     <>
                         <h2>Hello new user </h2>
                         <Link to="/user/newPost">Create new Post</Link>

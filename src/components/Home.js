@@ -1,6 +1,6 @@
 import React from "react";
 import axios from "axios";
-
+import "../styles/allPosts.css";
 //importing components
 import Post from "./Post";
 
@@ -67,21 +67,22 @@ class PostList extends React.Component {
 
     render() {
         return (<>
-            <div>
+            <div className="form-container">
                 <form onSubmit={this.getLocation}>
-                    <label htmlFor="zipcode">Enter Zipcode: </label>
+                    <label htmlFor="zipcode" className="form-label">Look up a list of posts by zipcode </label>
                     <input type="number" onChange={this.setZipcode} name="zipcode" id="zipcode" />
                     <input type="submit" value="Submit" />
                 </form>
             </div>
-            <div>
+            <div className="city-name">
                 {(this.state.city === "") ? <p></p> : <>
-                    <h1>{this.state.formatted_address}
-                    </h1>
-                    <h2>{this.state.city}</h2>
+                    <h2>Garage sale items in</h2>
+                    <h2>{this.state.formatted_address}
+                    </h2>
+                    {/* <h2>{this.state.city}</h2> */}
                 </>}
             </div>
-            <ul>
+            <ul className="list-of-all-posts">
                 {this.state.posts.map((post) => {
                     return <Post
                         key={post._id}

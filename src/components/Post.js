@@ -10,7 +10,7 @@ class Post extends React.Component {
         return (
             <li key={this.props.ids} id={this.props.ids} className="individual-post">
                 <Link to={"/post/" + this.props.ids} id={this.props.ids}>
-                    <h4>{this.props.title}</h4>
+                    <h4><i class="fas fa-angle-right"></i>{this.props.title}</h4>
                 </Link>
                 <br />
                 {/* {this.props.description}<br /> <img src={this.props.images[0]} alt=""></img> */}

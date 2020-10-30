@@ -1,6 +1,7 @@
 import React, { useState, useContext } from 'react';
 import { Link, useHistory } from "react-router-dom";
 import UserContext from "../../context/userContext";
+import Login from "../auth/Login";
 import axios from "axios";
 
 
@@ -61,7 +62,7 @@ export default function NewPost() {
     return (
         <div className="new-post-page">
             {
-                (!userData.user) ? <Link to="/log-in" > Log In</Link> :
+                (!userData.user) ? <Login /> :
                     <>
                         <h4>NEW POST</h4>
                         <p>{zipcode}</p>

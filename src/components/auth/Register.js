@@ -1,8 +1,11 @@
 import React, { useState, useContext } from 'react';
-import { useHistory } from "react-router-dom";
+import { useHistory, Link } from "react-router-dom";
 import UserContext from "../../context/userContext";
 import axios from "axios";
 import ErrorMsg from './ErrorMsg';
+
+//css
+import "../../styles/Register.css";
 
 ///we will be using this once the form sends the information
 //for a new user and then with the response we use the
@@ -21,17 +24,26 @@ export default function Register() {
     ///now we create a history
     const history = useHistory();
 
+    //clearing the error
+    const clearErr = () => {
+        setError(undefined);
+    }
+
     const emailVal = (event) => {
         setEmail(event.target.value);
+        clearErr();
     }
     const passwordVal = (event) => {
         setPassword(event.target.value);
+        clearErr();
     }
     const passwordCheckVal = (event) => {
         setpasswordCheck(event.target.value);
+        clearErr();
     }
     const displayNameVal = (event) => {
         setdisplayName(event.target.value);
+        clearErr();
     }
 
     const submit = async (event) => {
@@ -71,26 +83,24 @@ export default function Register() {
 
     }
 
-    //clearing the error
-    const clearErr = () => {
-        setError(undefined);
-    }
+
 
     return (
-        <div>
-            <h1>REGISTER PAGE</h1>
+        <div className="register-page">
+            <h1>REGISTER</h1>
             {error ? <ErrorMsg message={error} clearError={clearErr} /> : null}
             <form onSubmit={submit}>
-                <label htmlFor="register-email">Email</label>
-                <input id="register-email" type="email" onChange={emailVal} />
-                <label htmlFor="register-password">Password</label>
-                <input id="register-password" type="password" onChange={passwordVal} />
-                <input type="password" placeholder="Verify password" onChange={passwordCheckVal} />
+                <label htmlFor="register-email" className="register-label"> * Email</label>
+                <input id="register-email" type="email" onChange={emailVal} className="register-input" placeholder="user@email.com" />
+                <label htmlFor="register-password" className="register-label">* Password</label>
+                <input id="register-password" type="password" onChange={passwordVal} className="register-input" placeholder="Password" />
+                <input type="password" placeholder="Verify Password" onChange={passwordCheckVal} className="register-input" />
 
-                <label htmlFor="register-display-name">Display Name</label>
-                <input id="register-diplay-name" type="text" onChange={displayNameVal} />
+                <label htmlFor="register-display-name" className="register-label">Display Name</label>
+                <input id="register-diplay-name" type="text" onChange={displayNameVal} className="register-input" placeholder="user123" />
 
                 <input type="submit" value="Register" />
+                <Link to="/log-in"><p > Already have an account? </p></Link>
 
             </form>
 
