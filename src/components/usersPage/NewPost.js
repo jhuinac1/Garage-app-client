@@ -22,6 +22,7 @@ export default function NewPost() {
     const descriptionF = (e) => { setDescription(e.target.value) };
     const zipcodeF = (e) => { setZipcode(e.target.value); };
     const contactInfoF = (e) => { setContactInfo(e.target.value); };
+    console.log("here");
 
 
     const createNewPost = (event) => {

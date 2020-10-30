@@ -1,4 +1,4 @@
-import React, { useState, useContext } from 'react';
+import React, { useState, useContext, useEffect } from 'react';
 import { Link } from "react-router-dom";
 import UserContext from '../../context/userContext';
 import axios from "axios";
@@ -18,8 +18,12 @@ export default function Dashboard() {
             console.log(error.message);
         }
     }
+    useEffect(() => {
+        getUserPosts();
+    }, []);
 
-    getUserPosts();
+
+
 
 
 
@@ -35,7 +39,7 @@ export default function Dashboard() {
                             {
                                 (allPosts.length === 0) ? <p>No posts</p> :
                                     allPosts.map((post) => {
-                                        return <li className="dash-post">
+                                        return <li className="dash-post" key={post._id}>
                                             <Link to={"/post/" + post._id}>
                                                 {post.title}
                                             </Link>
