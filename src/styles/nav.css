@@ -1,14 +1,52 @@
 
 nav{
-    background-color: rgb(37, 28, 26);
+    background-color: rgb(0, 0, 0);
     color: white;
     min-height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 nav button{
-    padding: 0 1rem;
-    height: 100%;
+    padding:0 2rem;
+    height: 60px;
+    margin: 0 0 0 15px;
+    transform: skew(-10deg);
+    background-color: rgb(20, 85, 116);
+    transition: .3s ease-in-out;
 }
 
+nav button:hover{
+    background-color: rgb(74, 157, 172);
+}
+.btn-dashboard{
+    /* color: red; */
+    margin-right: 30px;
+    transition: .3s ease-in-out;
+}
+
+.btn-dashboard:hover{
+    color: rgb(39, 252, 230);
+}
+
+.auth-buttons{
+    margin-right: 25px;
+    height: 60px;
+    /* border: 1px solid red; */
+}
+
+.fa-home{
+    margin-left: 25px;
+    font-size: 2.5em;
+    color: rgb(76, 98, 173);
+    /* border: 1px solid red; */
+    transition: .2s ease-in;
+}
+
+.fa-home:hover{
+    color: rgb(105, 208, 255);
+    
+}
 
 

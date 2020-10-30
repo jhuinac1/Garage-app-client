@@ -1,14 +1,15 @@
 import React from "react";
 import "../styles/nav.css";
 import AuthButtons from "./auth/AuthButtons";
+import { Link } from "react-router-dom";
 class NavBar extends React.Component {
 
     render() {
 
         return (
-            <nav className="grid-x align-middle grid-padding-x align-justify ">
-                <a href="/home" className="cell small-1">HOME</a>
-                <div className="small-4">
+            <nav >
+                <Link to="/home" className="fas fa-home"></Link>
+                <div className="auth-buttons">
                     <AuthButtons />
                 </div>
             </nav>

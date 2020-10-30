@@ -1,12 +1,6 @@
 import React from "react";
 import "../styles/post.css";
-import {
-    BrowserRouter as Router,
-    Switch,
-    Route,
-    Link,
-    useParams
-} from "react-router-dom";
+import { Link } from "react-router-dom";
 
 
 class Post extends React.Component {

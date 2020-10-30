@@ -2,7 +2,6 @@ import React from "react";
 import axios from "axios";
 
 //importing components
-import NavBar from "./nav";
 import Post from "./Post";
 
 
@@ -12,14 +11,14 @@ class PostList extends React.Component {
         this.state = {
             posts: [],
             city: "",
-            state: ""
+            state: "",
+            zipcode: ""
         }
         this.getLocation = this.getLocation.bind(this)
         this.setZipcode = this.setZipcode.bind(this)
     }
     componentDidMount() {
         // this.getAllPosts();
-
         // this.getLocation(94901);
     }
     setZipcode(event) {
@@ -76,10 +75,11 @@ class PostList extends React.Component {
                 </form>
             </div>
             <div>
-                {(this.state.city === "") ? <p></p> :
+                {(this.state.city === "") ? <p></p> : <>
                     <h1>{this.state.formatted_address}
-                        <h2>{this.state.city}</h2>
-                    </h1>}
+                    </h1>
+                    <h2>{this.state.city}</h2>
+                </>}
             </div>
             <ul>
                 {this.state.posts.map((post) => {

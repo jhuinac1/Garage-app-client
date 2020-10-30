@@ -3,6 +3,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  /* color: bisque; */
 }
 
 a{
@@ -15,10 +16,12 @@ ul{
 
 button, input[type="submit"]{
   border: none;
-  background: none;
+  background: rgb(93, 140, 151);
   color: unset;
   cursor: pointer;
   outline: none;
+  padding: 12px;
+  margin:5px;
 }
 
 body {
