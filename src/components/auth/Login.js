@@ -65,7 +65,7 @@ export default function Login() {
 
 
     return (
-        <div className="log-in-page">
+        <div className="log-in-page main-container">
             <h1>LOG IN</h1>
             {error ? <ErrorMsg message={error} clearError={clearErr} /> : null}
             <form onSubmit={submit}>

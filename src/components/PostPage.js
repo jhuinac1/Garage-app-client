@@ -18,7 +18,7 @@ const PostPage = (props) => {
         )
     }, []);
 
-    return (<div className="post-page">
+    return (<div className="post-page main-container">
         <h1>Page Test</h1>
         {(post.pictures === undefined || post.pictures.length < 1) ?
             <p>No Image</p> :

@@ -66,7 +66,7 @@ class PostList extends React.Component {
     }
 
     render() {
-        return (<>
+        return (<div className="main-container">
             <div className="form-container">
                 <form onSubmit={this.getLocation}>
                     <label htmlFor="zipcode" className="form-label">Look up a list of posts by zipcode </label>
@@ -95,7 +95,7 @@ class PostList extends React.Component {
                 )}
             </ul>
 
-        </>
+        </div>
         )
     }
 };

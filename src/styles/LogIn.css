@@ -5,50 +5,69 @@
     flex-direction: column;
     align-items: center;
     padding:25px 0;
-    color: rgb(32, 49, 65);
+    color: white;
 }
 
 .log-in-page form{
     display: flex;
     flex-direction: column;
-    background-color: rgb(238, 238, 238);
+    /* background-color: #295c593d; */
+    /* option 3 */
+    background-color: #283b53;
     padding: 100px 10px;
-    margin: 50px 0;
+    margin: 70px 0;
     width: 320px;
 }
 .log-in-page h1{
-    transform: skew(-7deg);
+    /* transform: skew(-7deg); */
     font-size: 3em;
+    /* background-color: rgb(32, 49, 65); */
+    /* background-color: #3a807c; */
+    /* option 3 */
+    background-color: #283b53;
+    color: white;
+    width: 90%;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .login-input{
     width: 90%;
-    margin: 7px auto 25px auto;
+    margin: 7px auto 15px auto;
     padding: 5px 12px;
     border-radius: 2px;
-    border: 1px solid rgba(133, 133, 133, 0.397);
-    transform: skew(-10deg);
+    border: none;
+    border-bottom: 1px solid rgba(133, 133, 133, 0.397);
+    transition: .3s ease-in-out;
+    /* transform: skew(-10deg); */
+}
+.login-input:focus{
+    border-bottom: 1px solid rgb(2, 156, 218);
 }
 .login-label{
     margin-left:15px;
-    transform: skew(-10deg);
+    /* transform: skew(-10deg); */
 }
 
 /* submit button */
 .log-in-page form input[type="submit"]{
-    color: white;
+    color: rgb(57, 188, 192);
     width: 90%;
-    transform: skew(-10deg);
+    font-weight: 900;
+    /* transform: skew(-10deg); */
     margin: 0 auto;
     transition: .3s ease-in-out;
+    background-color: #364f70;
 }
 .log-in-page form input[type="submit"]:hover{
-    background-color: rgb(74, 157, 172);
+    background-color: rgb(41, 94, 91);
 }
 
 .log-in-page form p{
-    margin: 20px 0 0 12px;
-    color: rgba(78, 78, 78, 0.705);
+    margin: 30px 0 0 12px;
+    color: rgba(72, 201, 233, 0.705);
     transform: skew(-10deg);
     transition: .2s ease-in-out;
 }
@@ -56,9 +75,8 @@
     color: rgb(41, 88, 107);
 }
 
-.error-messages{
+/* .error-messages{
     position: absolute;
-    top: 150px;
     color: white;
     background-color: rgb(216, 36, 36);
     font-size: .7em;
@@ -78,4 +96,4 @@
 
 .error-messages span{
     word-wrap: break-word;
-}
+} */

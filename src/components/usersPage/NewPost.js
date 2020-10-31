@@ -61,7 +61,7 @@ export default function NewPost() {
     }
 
     return (
-        <div className="new-post-page">
+        <div className="new-post-page main-container">
             {
                 (!userData.user) ? <Login /> :
                     <>

@@ -11,15 +11,23 @@
 .register-page form{
     display: flex;
     flex-direction: column;
-    background-color: rgb(238, 238, 238);
-    padding: 80px 10px;
-    margin: 50px 0;
+    background-color: #295c593d;
+    padding: 100px 10px;
+    margin: 70px 0;
     width: 320px;
 }
 
 .register-page h1{
-    transform: skew(-7deg);
+    /* transform: skew(-7deg); */
     font-size: 3em;
+    /* background-color: rgb(32, 49, 65); */
+    background-color: #3a807c;
+    color: white;
+    width: 90%;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .register-input{
@@ -27,29 +35,36 @@
     margin: 7px auto 15px auto;
     padding: 5px 12px;
     border-radius: 2px;
-    border: 1px solid rgba(133, 133, 133, 0.397);
-    transform: skew(-5deg);
+    border: none;
+    border-bottom: 1px solid rgba(133, 133, 133, 0.397);
+    transition: .3s ease-in-out;
+    /* transform: skew(-10deg); */
+}
+register-input:focus{
+    border-bottom: 1px solid rgb(2, 156, 218);
 }
 
 .register-label{
     margin-left:15px;
-    transform: skew(-5deg);
+    /* transform: skew(-5deg); */
 }
 
 .register-page form input[type="submit"]{
     color: white;
     width: 90%;
-    transform: skew(-5deg);
+    font-weight: 900;
+    /* transform: skew(-10deg); */
     margin: 0 auto;
     transition: .3s ease-in-out;
+    background-color: #469C98;
 }
 .register-page form input[type="submit"]:hover{
-    background-color: rgb(74, 157, 172);
+    background-color: rgb(35, 85, 78);
 }
 
 
 .register-page form p{
-    margin: 20px 0 0 12px;
+    margin: 30px 0 0 12px;
     color: rgba(78, 78, 78, 0.705);
     transform: skew(-10deg);
     transition: .2s ease-in-out;
@@ -62,7 +77,7 @@
     position: absolute;
     top: 150px;
     color: white;
-    background-color: rgb(216, 36, 36);
+    background-color: rgba(211, 89, 89, 0.993);
     font-size: .7em;
     font-weight: 700;
     padding: 5px 10px;

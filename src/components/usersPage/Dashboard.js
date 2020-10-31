@@ -28,7 +28,7 @@ export default function Dashboard() {
 
 
     return (
-        <div className="Dashboard-page">
+        <div className="Dashboard-page main-container">
             {
                 (!userData.user) ? <Login /> :
                     <>

@@ -9,6 +9,7 @@ import Register from "./components/auth/Register";
 import axios from "axios";
 import Dashboard from "./components/usersPage/Dashboard";
 import NewPost from "./components/usersPage/NewPost";
+import Footer from "./components/Footer";
 
 //more simpler than redux, and comes pre-installed with react
 //lets use use state , but not local to a single component but
@@ -78,6 +79,7 @@ function App() {
             <Route path="/post/:id" component={PostPage} />
             <Route exact path="/home" component={Home} />
           </Switch>
+          <Footer />
         </UserContext.Provider>
       </BrowserRouter>
     </>

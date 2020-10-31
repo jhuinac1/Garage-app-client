@@ -86,7 +86,7 @@ export default function Register() {
 
 
     return (
-        <div className="register-page">
+        <div className="register-page main-container">
             <h1>REGISTER</h1>
             {error ? <ErrorMsg message={error} clearError={clearErr} /> : null}
             <form onSubmit={submit}>

@@ -1,6 +1,10 @@
 
 nav{
-    background-color: rgb(0, 0, 0);
+    /* background-color: rgb(16, 31, 59); */
+    /* background-color: #F2906B; */
+    /* background-color: #469C98; */
+    /* option 3 */
+    background-color: #283b53;
     color: white;
     min-height: 60px;
     display: flex;
@@ -13,12 +17,17 @@ nav button{
     height: 60px;
     margin: 0 0 0 15px;
     transform: skew(-10deg);
-    background-color: rgb(20, 85, 116);
+    /* background-color: rgb(20, 85, 116); */
+    background-color: rgb(48, 156, 160);
+    color: white;
     transition: .3s ease-in-out;
+    border: 1px solid #67469c5e;
 }
 
 nav button:hover{
-    background-color: rgb(74, 157, 172);
+    background-color: white;
+    color: rgb(57, 188, 192);
+    /* border: 1px solid rgba(255, 255, 255, 0.301); */
 }
 .btn-dashboard{
     /* color: red; */
@@ -39,13 +48,15 @@ nav button:hover{
 .fa-home{
     margin-left: 25px;
     font-size: 2.5em;
-    color: rgb(28, 115, 155);
+    /* color: rgb(28, 115, 155); */
+    color: rgb(57, 188, 192);
     /* border: 1px solid red; */
     transition: .2s ease-in;
 }
 
 .fa-home:hover{
-    color: rgb(105, 208, 255);
+    /* color: rgb(105, 208, 255); */
+    color: rgb(45, 29, 54);
     
 }
 
