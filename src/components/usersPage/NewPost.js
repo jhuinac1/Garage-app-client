@@ -3,7 +3,7 @@ import { Link, useHistory } from "react-router-dom";
 import UserContext from "../../context/userContext";
 import Login from "../auth/Login";
 import axios from "axios";
-
+import "../../styles/NewPost.css";
 
 export default function NewPost() {
     const { userData } = useContext(UserContext);
@@ -65,22 +65,33 @@ export default function NewPost() {
             {
                 (!userData.user) ? <Login /> :
                     <>
-                        <h4>NEW POST</h4>
-                        <p>{zipcode}</p>
+                        <h4 className="new-post-title">Add A New Item To Your Garage</h4>
 
-                        <form onSubmit={createNewPost}>
-                            <label htmlFor="category">Category</label>
-                            <input id="category" type="text" onChange={categoryF} />
-                            <label htmlFor="title">Title</label>
-                            <input id="title" type="text" onChange={titleF} />
-                            <label htmlFor="price">Price</label>
-                            <input id="price" type="number" onChange={priceF} />
-                            <label htmlFor="description">Description</label>
-                            <input id="description" type="text" onChange={descriptionF} />
-                            <label htmlFor="zipcode">Zipcode</label>
-                            <input id="zipcode" type="number" onChange={zipcodeF} />
-                            <label htmlFor="contactInfo">Contact Information</label>
-                            <input id="contactInfo" type="text" onChange={contactInfoF} />
+                        <form onSubmit={createNewPost} className="new-post-form">
+                            <div className="form-label-input">
+                                <label htmlFor="category">Category</label>
+                                <input id="category" type="text" onChange={categoryF} />
+                            </div>
+                            <div className="form-label-input">
+                                <label htmlFor="title">Title</label>
+                                <input id="title" type="text" onChange={titleF} />
+                            </div>
+                            <div className="form-label-input">
+                                <label htmlFor="price">Price</label>
+                                <input id="price" type="number" onChange={priceF} />
+                            </div>
+                            <div className="form-label-input">
+                                <label htmlFor="description">Description</label>
+                                <input id="description" type="text" onChange={descriptionF} />
+                            </div>
+                            <div className="form-label-input">
+                                <label htmlFor="zipcode">Zipcode</label>
+                                <input id="zipcode" type="number" onChange={zipcodeF} />
+                            </div>
+                            <div className="form-label-input">
+                                <label htmlFor="contactInfo">Contact Information</label>
+                                <input id="contactInfo" type="text" onChange={contactInfoF} />
+                            </div>
 
                             <input type="submit" value="Create A New Post" />
                         </form>

@@ -1,0 +1,49 @@
+
+.Dashboard-page{
+    position: relative;
+}
+.user-title{
+    margin: 25px 0 25px 45px;
+}
+
+.create-new-post{
+    margin-left: 70px;
+    font-size: 1.2em;
+    color: rgb(46, 179, 255);
+}
+
+.fa-user-alt{
+    color: rgb(202, 202, 202);
+    margin-right: 5px;
+}
+
+.create-new-post:hover i{
+    animation: rotate-icon 1s infinite;
+}
+
+
+@keyframes rotate-icon{
+    from{ transform: rotate(0deg);}
+    to{ transform: rotate(360deg);}
+}
+
+
+
+.user-all-posts{
+    width: 80%;
+    margin: 50px auto;
+    min-width: 300px;
+    display: flex;
+    flex-direction: column;
+}
+
+.dash-post{
+    background-color: rgb(72, 113, 141);
+    padding: 20px 12px;
+    margin-bottom: 12px;
+}
+
+.dash-post:hover{
+    background-color: #364f70;
+    color: #6291f0;
+}

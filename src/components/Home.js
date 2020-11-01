@@ -70,16 +70,20 @@ class PostList extends React.Component {
             <div className="form-container">
                 <form onSubmit={this.getLocation}>
                     <label htmlFor="zipcode" className="form-label">Look up a list of posts by zipcode </label>
+                    <i className="fas fa-map-marked-alt"></i>
                     <input type="number" onChange={this.setZipcode} name="zipcode" id="zipcode" />
                     <input type="submit" value="Submit" />
                 </form>
             </div>
+            <hr className="top-break-line" />
+
             <div className="city-name">
                 {(this.state.city === "") ? <p></p> : <>
                     <h2>Garage sale items in</h2>
                     <h2>{this.state.formatted_address}
                     </h2>
                     {/* <h2>{this.state.city}</h2> */}
+                    <hr className="break-line" />
                 </>}
             </div>
             <ul className="list-of-all-posts">

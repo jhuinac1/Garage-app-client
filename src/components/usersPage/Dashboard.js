@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import UserContext from '../../context/userContext';
 import axios from "axios";
 import Login from "../auth/Login";
+import "../../styles/Dashboard.css";
 
 export default function Dashboard() {
     const { userData } = useContext(UserContext);
@@ -20,7 +21,7 @@ export default function Dashboard() {
     }
     useEffect(() => {
         getUserPosts();
-    }, []);
+    }, [userData]);
 
 
 
@@ -32,19 +33,17 @@ export default function Dashboard() {
             {
                 (!userData.user) ? <Login /> :
                     <>
-                        <h2>Hello new user </h2>
-                        <Link to="/user/newPost">Create new Post</Link>
+                        <h2 className="user-title"><i className="fas fa-user-alt"></i> {userData.user.displayName} </h2>
+                        <Link to="/user/newPost" className="create-new-post">
+                            <i className="fas fa-plus-circle"></i> Create new Post</Link>
 
                         <ul className="user-all-posts">
                             {
                                 (allPosts.length === 0) ? <p>No posts</p> :
                                     allPosts.map((post) => {
-                                        return <li className="dash-post" key={post._id}>
-                                            <Link to={"/post/" + post._id}>
-                                                {post.title}
-                                            </Link>
-
-                                        </li>
+                                        return <Link to={"/post/" + post._id} key={post._id} className="dash-post">
+                                            {post.title}
+                                        </Link>
                                     }
                                     )
                             }

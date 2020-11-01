@@ -1,0 +1,44 @@
+
+
+
+
+.new-post-title{
+    text-align: center;
+    font-size: 2.1em;
+    margin: 50px auto;
+    padding: 12px;
+}
+
+.new-post-form{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    min-width: 300px;
+    margin: 35px auto;
+}
+
+.form-label-input{
+    display: flex;
+    margin-bottom: 20px;
+}
+.form-label-input input{
+    flex-grow: 1;
+    border: none;
+    background-color: rgb(182, 206, 219);
+}
+.form-label-input label{
+    margin-right: 15px;
+    padding: 5px 10px;
+}
+
+.new-post-form input[type="submit"]{
+    margin-top: 25px;
+    width: 170px;
+    color: rgb(10, 160, 247);
+    background-color: #364f70;
+}
+
+.new-post-form input[type="submit"]:hover{
+    background-color: rgb(36, 146, 209);
+    color: rgb(233, 233, 233);
+}

@@ -5,14 +5,16 @@
     flex-direction: column;
     align-items: center;
     padding:25px 0;
-    color: rgb(32, 49, 65);
+    color: rgb(188, 232, 245);
 }
 
 .register-page form{
     display: flex;
     flex-direction: column;
-    background-color: #295c593d;
-    padding: 100px 10px;
+    /* background-color: #295c593d; */
+    /* option 3 */
+    background-color: #283b53;
+    padding: 50px 10px;
     margin: 70px 0;
     width: 320px;
 }
@@ -21,7 +23,7 @@
     /* transform: skew(-7deg); */
     font-size: 3em;
     /* background-color: rgb(32, 49, 65); */
-    background-color: #3a807c;
+    background-color: #283b53;
     color: white;
     width: 90%;
     height: 100px;
@@ -50,27 +52,27 @@ register-input:focus{
 }
 
 .register-page form input[type="submit"]{
-    color: white;
+    color: rgb(10, 160, 247);
     width: 90%;
     font-weight: 900;
     /* transform: skew(-10deg); */
     margin: 0 auto;
     transition: .3s ease-in-out;
-    background-color: #469C98;
+    background-color: #364f70;
 }
 .register-page form input[type="submit"]:hover{
-    background-color: rgb(35, 85, 78);
+    background-color: rgb(36, 146, 209);
+    color: rgb(233, 233, 233);
 }
-
 
 .register-page form p{
     margin: 30px 0 0 12px;
-    color: rgba(78, 78, 78, 0.705);
+    color: rgba(107, 156, 168, 0.705);
     transform: skew(-10deg);
     transition: .2s ease-in-out;
 }
 .register-page form p:hover{
-    color: rgb(41, 88, 107);
+    color: rgb(57, 192, 255);
 }
 
 .error-messages{

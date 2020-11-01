@@ -4,15 +4,23 @@
 
 .form-container form{
     /* border: 1px solid rgba(128, 128, 128, 0.562); */
-    margin-top: 50px;
+    position: relative;
+    margin: 50px auto 40px auto;
+    text-align: center;
     padding: 40px 60px;
     display: flex;
     flex-direction: column;
     font-weight: 600;
-    background-color: rgb(224, 224, 224);
-    color: rgb(32, 49, 65);
+    background-color: #283b53;
+    color: rgb(220, 233, 245);
+    width: 80%;
 }
-
+.fa-map-marked-alt{
+    font-size: 2em;
+    margin-top: 12px;
+    /* position: absolute; */
+    
+}
 .form-label{
     outline: none;
 }
@@ -25,7 +33,7 @@ input::-webkit-inner-spin-button {
 .form-container input[type="number"]{
     border: 1px solid rgba(128, 128, 128, 0.582);
     margin: 15px auto;
-    padding: 10px;
+    padding: 5px;
     font-size: 1.2em;
     text-align: center;
     width: 120px;
@@ -34,28 +42,37 @@ input::-webkit-inner-spin-button {
 }
 
 .form-container input[type="submit"]{
-    color: rgb(236, 236, 236);
-    background-color: rgb(20, 51, 87);
+    color: rgb(10, 160, 247);
+    background-color: #364f70;
     font-weight: 300;
     font-size: 1.1em;
     transition: .3s ease-in-out;
+    width: 200px;
+    margin: 0 auto;
 }
 .form-container input[type="submit"]:hover{
-    background-color: rgb(46, 113, 139);
+    background-color: rgb(36, 146, 209);
+    color: rgb(233, 233, 233);
 }
 
 .city-name{
     padding: 12px;
     margin: 25px 0;
     text-align: center;
-    color: rgb(32, 49, 65);
+    color: rgb(255, 255, 255);
 }
-
+.top-break-line{
+    width: 98%;
+    margin: 0 auto;
+}
+.break-line {
+    margin-top: 35px;
+}
 .list-of-all-posts{
     /* border: 1px solid red; */
     padding: 12px;
     width: 90%;
-    margin: 15px auto;
+    margin: 35px auto;
 }
 
 .individual-post{
@@ -65,26 +82,32 @@ input::-webkit-inner-spin-button {
     padding-left: 40px;
     display: flex;
     align-items: center;
-    background-color: rgb(226, 226, 226);
+    /* background-color: rgba(219, 219, 219, 0.747); */
+    background-color: rgb(72, 113, 141);
+    /* color: white; */
     border-radius: 2px;
     transition: .2s ease-in-out;
 }
-
+.individual-post h4{
+    color: rgb(49, 231, 207);
+}
 .individual-post:hover{
-    background-color: rgb(158, 158, 158);
+    background-color: #364f70;
+}
+.individual-post:hover h4{
+    color: rgb(10, 160, 247);
 }
 
 .individual-post i {
     margin-right: 30px;
     font-size: 1.5em;
 }
+
 .individual-post:hover i{
     animation: left-to-right-arrow 1s infinite;
 }
 
-.individual-post h4{
-    color: rgb(32, 49, 65);
-}
+
 
 @keyframes left-to-right-arrow{
     50%{
