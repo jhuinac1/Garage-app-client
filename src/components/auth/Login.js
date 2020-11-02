@@ -59,6 +59,7 @@ export default function Login() {
                     history.push("/user/dashboard");
                 });
         } catch (err) {
+            console.log(err);
             console.log(err.response.data.msg);
             err.response.data.msg && setError(err.response.data.msg);
         }
