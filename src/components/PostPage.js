@@ -21,17 +21,25 @@ const PostPage = (props) => {
     }, []);
 
     return (<div className="post-page main-container">
-        {(post.pictures === undefined || post.pictures.length < 1) ?
-            <img src={noImageUrl} /> :
-            post.pictures.map((picture) => {
-                return <img src={picture} key={picture} alt="no-pic" />
+        <div className="information-container">
+            <h1 >{post.title}</h1>
+            <p>In {post.city}</p>
+            {(post.price <= 0) ? <h5>Free!</h5> :
+                <h5>${post.price}</h5>
             }
-            )}
-        <h4>{post.description}</h4> <br />
-        <h4>{post.title}</h4> <br />
-        <h4>{post.city}</h4> <br />
-        <h5>{post.price}</h5> <br />
-        <h5>{post.contactInfo}</h5> <br />
+            <h4>{post.description}</h4>
+            <h6>Contact Information: {post.contactInfo}</h6>
+
+        </div>
+        <div className="images-container">
+            {(post.pictures === undefined || post.pictures.length < 1) ?
+                <img src={noImageUrl} /> :
+                post.pictures.map((picture) => {
+                    return <img src={picture} key={picture} alt="no-pic" />
+                }
+                )}
+
+        </div>
 
     </div>)
 }

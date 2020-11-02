@@ -1,4 +1,39 @@
 .post-page{
-    background-color: rgb(214, 187, 187);
-    min-height: 100vh;
+    background-color: rgb(133, 155, 173);
+    display: flex;
+    justify-content: space-around;
+    padding: 12px;
+    padding-top: 50px;
+} 
+
+.information-container h1{
+    font-size: 3.2rem;
+}
+
+.information-container p{
+    margin-bottom: 30px;
+}
+
+.information-container h5{
+    font-size: 1.5em;
+}
+
+.information-container h4{
+    margin: 20px 0;
+    margin-left: 20px;
+}
+
+.information-container h6{
+    margin-left: 20px;
+    font-size: 1.2em;
+    font-weight: 300;
+}
+
+
+
+
+@media  (max-width: 600px){
+    .post-page{
+        flex-direction: column;
+    }
 }

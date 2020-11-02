@@ -13,20 +13,20 @@ nav{
 }
 
 nav button{
-    padding:0 2rem;
+    padding:0 1.5rem;
     height: 60px;
-    margin: 0 0 0 15px;
+    margin: 0 0 0 5px;
     transform: skew(-10deg);
     /* background-color: rgb(20, 85, 116); */
-    background-color: rgb(48, 124, 160);
-    color: white;
+    background-color: rgb(66, 120, 165);
+    color: rgb(211, 241, 255);
     transition: .3s ease-in-out;
     border: 1px solid #67469c5e;
 }
 
 nav button:hover{
-    background-color: white;
-    color: rgb(57, 188, 192);
+    background-color: rgb(177, 207, 228);
+    color: rgb(33, 105, 107);
     /* border: 1px solid rgba(255, 255, 255, 0.301); */
 }
 .btn-dashboard{
@@ -46,15 +46,18 @@ nav button:hover{
 }
 
 .fa-home{
-    margin-left: 25px;
-    font-size: 2.5em;
+    margin-left: 15px;
+    font-size: 1.9em;
     /* color: rgb(28, 115, 155); */
-    color: rgb(17, 130, 206);
+    /* color: rgb(17, 130, 206); */
     /* border: 1px solid red; */
     transition: .2s ease-in;
 }
+.fa-search {
+    font-size: 1.5em;
+}
 
-.fa-home:hover{
+.fa-home:hover, .fa-search:hover{
     /* color: rgb(105, 208, 255); */
     color: rgb(0, 153, 255);
     

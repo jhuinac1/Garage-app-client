@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import './App.css';
 import { BrowserRouter, Switch, Route } from "react-router-dom";
-import Home from "./components/Home";
+import Search from "./components/Search";
 import PostPage from "./components/PostPage";
 import Nav from "./components/nav";
 import Login from "./components/auth/Login";
@@ -10,6 +10,7 @@ import axios from "axios";
 import Dashboard from "./components/usersPage/Dashboard";
 import NewPost from "./components/usersPage/NewPost";
 import Footer from "./components/Footer";
+import Homepage from "./components/Homepage";
 
 //more simpler than redux, and comes pre-installed with react
 //lets use use state , but not local to a single component but
@@ -77,7 +78,8 @@ function App() {
             <Route path="/user/newPost" component={NewPost} />
             <Route path="/register" component={Register} />
             <Route path="/post/:id" component={PostPage} />
-            <Route exact path="/home" component={Home} />
+            <Route exact path="/search" component={Search} />
+            <Route exact path="/" component={Homepage} />
           </Switch>
           <Footer />
         </UserContext.Provider>

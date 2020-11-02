@@ -19,7 +19,7 @@ export default function AuthButtons() {
             user: undefined,
         })
         localStorage.setItem("auth-token", "");
-        history.push("/home");
+        history.push("/search");
     };
 
 
