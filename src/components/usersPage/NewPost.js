@@ -45,7 +45,7 @@ export default function NewPost() {
                         uId: userData.user.id
                     }
                     // console.log(createPost);
-                    axios.post("http://localhost:3001/posts", createPost).then(
+                    axios.post("https://fp-garage-api.herokuapp.com/posts", createPost).then(
                         (res) => {
                             // console.log(res.data)
                             history.push("/user/dashboard");

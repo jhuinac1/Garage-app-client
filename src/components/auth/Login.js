@@ -41,7 +41,8 @@ export default function Login() {
         try {
             const loginUser = { email, password };
             //so now we can log in the user here
-            await axios.post("http://localhost:3001/users/login",
+            // https://fp-garage-api.herokuapp.com/posts
+            await axios.post("https://fp-garage-api.herokuapp.com/users/login",
                 {
                     email: loginUser.email,
                     password: loginUser.password

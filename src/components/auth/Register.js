@@ -53,11 +53,11 @@ export default function Register() {
 
         try {
             const newUser = { email, password, passwordCheck, displayName };
-            await axios.post("http://localhost:3001/users/sign-up", newUser)
+            await axios.post("https://fp-garage-api.herokuapp.com/users/sign-up", newUser)
                 .then((response) => {
                     //if not errors then we will succesfully register a new user
                     //so now we can log in the user here
-                    axios.post("http://localhost:3001/users/login",
+                    axios.post("https://fp-garage-api.herokuapp.com/users/login",
                         {
                             email: newUser.email,
                             password: newUser.password

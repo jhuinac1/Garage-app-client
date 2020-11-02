@@ -57,7 +57,7 @@ class PostList extends React.Component {
         }
     }
     getAllPosts(cityName) {
-        axios.get("http://localhost:3001/posts/byName/" + cityName).then((response) => {
+        axios.get("https://fp-garage-api.herokuapp.com/byName/" + cityName).then((response) => {
             this.setState({
                 posts: response.data,
             })

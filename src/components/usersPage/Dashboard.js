@@ -14,7 +14,7 @@ export default function Dashboard() {
 
     const getUserPosts = async () => {
         try {
-            const posts = await axios("http://localhost:3001/posts/userPosts/" + userData.user.id);
+            const posts = await axios("https://fp-garage-api.herokuapp.com/posts/userPosts/" + userData.user.id);
             // console.log(posts.data);
             setAllPosts(posts.data);
 
@@ -29,7 +29,7 @@ export default function Dashboard() {
 
     const deletePost = async (event) => {
         console.log(event.target.id);
-        await axios.delete("http://localhost:3001/posts/deletePost/" + event.target.id);
+        await axios.delete("https://fp-garage-api.herokuapp.com/posts/" + event.target.id);
         getUserPosts();
     }
 
