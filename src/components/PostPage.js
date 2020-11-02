@@ -1,9 +1,11 @@
 import axios from "axios";
 import React from "react";
 import { useState, useEffect } from 'react';
+import { noImageUrl } from "./Misc/NoImageUrl";
 
 
 const PostPage = (props) => {
+
 
     const [post, setPost] = useState({});
 
@@ -19,9 +21,8 @@ const PostPage = (props) => {
     }, []);
 
     return (<div className="post-page main-container">
-        <h1>Page Test</h1>
         {(post.pictures === undefined || post.pictures.length < 1) ?
-            <p>No Image</p> :
+            <img src={noImageUrl} /> :
             post.pictures.map((picture) => {
                 return <img src={picture} key={picture} alt="no-pic" />
             }
