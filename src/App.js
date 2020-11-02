@@ -34,7 +34,7 @@ function App() {
       // console.log(token);
 
       //START OF FIRST AXIOS CALL **********
-      const res = await axios.post("http://localhost:3001/users/isTokenValid", null,
+      const res = await axios.post("https://fp-garage-api.herokuapp.com/users/isTokenValid", null,
         {
           headers: { "x-auth-token": token }
         })
@@ -43,7 +43,7 @@ function App() {
       // console.log(res.data);
       if (res.data) {
         ///SECOND AXIOS CALL ******
-        const res2 = await axios.get("http://localhost:3001/users/info",
+        const res2 = await axios.get("https://fp-garage-api.herokuapp.com/users/info",
           {
             headers: {
               "x-auth-token": token,
