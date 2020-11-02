@@ -39,7 +39,7 @@ class PostList extends React.Component {
             const API_KEY = process.env.REACT_APP_GOOGLE_MAPS_API_KEY;
             axios.get(`https://maps.googleapis.com/maps/api/geocode/json?address=${this.state.zipcode}&region=US&key=${API_KEY}`).then(
                 (response) => {
-                    console.log(response.data.results[0])
+                    // console.log(response.data.results[0])
                     const cityInfo = response.data.results[0];
                     const nCity = cityInfo.address_components[1].long_name;
                     this.getAllPosts(nCity);
@@ -49,7 +49,7 @@ class PostList extends React.Component {
                     })
                 }
             ).catch((error) => {
-                console.log(error);
+                // console.log(error);
             }
             )
         } else {
