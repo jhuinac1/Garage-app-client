@@ -22,7 +22,7 @@ export default function NewPost() {
     const descriptionF = (e) => { setDescription(e.target.value) };
     const zipcodeF = (e) => { setZipcode(e.target.value); };
     const contactInfoF = (e) => { setContactInfo(e.target.value); };
-    console.log("here");
+    // console.log("here");
 
 
     const createNewPost = (event) => {
@@ -34,7 +34,7 @@ export default function NewPost() {
                 (response) => {
                     const cityInfo = response.data.results[0];
                     const nCity = cityInfo.address_components[1].long_name;
-                    console.log(nCity);
+                    // console.log(nCity);
                     const createPost = {
                         category: category,
                         title: title,
@@ -44,7 +44,7 @@ export default function NewPost() {
                         contactInfo: contactInfo,
                         uId: userData.user.id
                     }
-                    console.log(createPost);
+                    // console.log(createPost);
                     axios.post("http://localhost:3001/posts", createPost).then(
                         (res) => {
                             // console.log(res.data)
@@ -78,7 +78,7 @@ export default function NewPost() {
                             </div>
                             <div className="form-label-input">
                                 <label htmlFor="price">Price</label>
-                                <input id="price" type="number" onChange={priceF} />
+                                <input id="price" type="number" onChange={priceF} step="0.01" />
                             </div>
                             <div className="form-label-input">
                                 <label htmlFor="description">Description</label>

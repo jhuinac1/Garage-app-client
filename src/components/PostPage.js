@@ -14,7 +14,7 @@ const PostPage = (props) => {
         let postId = props.match.params.id;
         axios.get("http://localhost:3001/posts/" + postId).then(
             (response) => {
-                console.log(response.data);
+                // console.log(response.data);
                 setPost(response.data);
             }
         )

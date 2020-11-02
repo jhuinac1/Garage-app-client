@@ -50,7 +50,7 @@ function App() {
             }
           });
         //END OF FIRST AXIOS CALL**********
-        console.log(res2);
+        // console.log(res2);
         setUserData({
           token,
           user: res2.data

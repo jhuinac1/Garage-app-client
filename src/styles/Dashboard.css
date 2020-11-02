@@ -39,11 +39,22 @@
 
 .dash-post{
     background-color: rgb(72, 113, 141);
-    padding: 20px 12px;
+    padding: 5px 12px;
     margin-bottom: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .dash-post:hover{
     background-color: #364f70;
     color: #6291f0;
+}
+
+.fa-trash-alt{
+    border-radius: 5px;
+}
+.fa-trash-alt:hover{
+    background-color: rgb(255, 255, 255);
+    color: rgb(209, 26, 26);
 }
